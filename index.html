@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>𝐖𝐇𝐈𝗦𝗞𝗬_CRACK::WIFI_CARD_BRUTEFORCE_8DIGITS</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            user-select: none;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(circle at 20% 30%, #021002 0%, #000000 100%);
+            font-family: 'Courier New', 'Fira Code', monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* خلفية الأرقام المتساقطة (هولوغرام هكرز) */
+        canvas#falling-digits {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        /* الحاوية الرئيسية */
+        .crack-container {
+            position: relative;
+            z-index: 10;
+            max-width: 750px;
+            width: 100%;
+            background: rgba(0, 20, 0, 0.65);
+            backdrop-filter: blur(12px);
+            border-radius: 48px;
+            border: 1px solid #0f0;
+            box-shadow: 0 0 40px rgba(0, 255, 0, 0.3), inset 0 0 20px rgba(0,255,0,0.2);
+            padding: 30px 25px 40px;
+            transition: all 0.3s;
+        }
+
+        /* العنوان الرئيسي (احمر متوهج + اهتزاز + خلل تقني) */
+        .glitch-red-title {
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 900;
+            margin-bottom: 35px;
+            color: #ff1111;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 0 0 8px red, 0 0 18px #ff4444;
+            animation: screenBurn 0.12s infinite, glitchText 1.5s infinite alternate;
+            transform-origin: center;
+            word-break: keep-all;
+        }
+        @keyframes screenBurn {
+            0% { text-shadow: 2px 0 red, -2px 0 #00ff00, 0px 0px 20px red; opacity: 1; transform: skew(0deg);}
+            25% { text-shadow: -3px 0 #ff0000, 3px 0 #00ff66; transform: skew(1.5deg) translateX(1px);}
+            50% { text-shadow: 4px 0 darkred, -2px 0 lime; transform: skew(-1.2deg) translateX(-1px);}
+            75% { text-shadow: -1px 0 red, 4px 0 #0f0; transform: skew(0.8deg);}
+            100% { text-shadow: 0px 0px 25px red, 0px 0px 8px #ff8888; transform: skew(0deg);}
+        }
+        @keyframes glitchText {
+            0% { letter-spacing: 2px; filter: blur(0px);}
+            30% { letter-spacing: 5px; filter: blur(0.6px);}
+            70% { letter-spacing: 1px; filter: blur(0px);}
+            100% { letter-spacing: 3px; filter: blur(0.2px);}
+        }
+
+        /* الحقول المتوهجة بألوان متعددة */
+        .input-group {
+            margin-bottom: 30px;
+            background: rgba(0,0,0,0.6);
+            border-radius: 60px;
+            padding: 5px 20px 15px 20px;
+            transition: all 0.2s;
+        }
+        .input-group label {
+            display: block;
+            color: #ccc;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .glow-input {
+            width: 100%;
+            background: #001a00;
+            border: 2px solid;
+            padding: 14px 18px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-family: monospace;
+            font-weight: bold;
+            color: #b3ffb3;
+            outline: none;
+            transition: 0.2s;
+            text-align: center;
+            direction: ltr;
+        }
+        /* تأثيرات متوهجة بألوان مختلفة */
+        .input-group:nth-of-type(1) .glow-input {
+            border-color: #0f0;
+            box-shadow: 0 0 12px #0f0;
+        }
+        .input-group:nth-of-type(2) .glow-input {
+            border-color: #00aaff;
+            box-shadow: 0 0 12px #0af;
+        }
+        .input-group:nth-of-type(3) .glow-input {
+            border-color: #ff44cc;
+            box-shadow: 0 0 12px #f0f;
+        }
+
+        .glow-input:focus {
+            transform: scale(1.01);
+            background: #002200;
+            border-width: 3px;
+        }
+
+        /* زر الاختراق */
+        .crack-btn {
+            width: 100%;
+            background: linear-gradient(95deg, #00aa00, #00ff40);
+            border: none;
+            padding: 14px;
+            border-radius: 60px;
+            font-size: 1.4rem;
+            font-weight: bold;
+            font-family: monospace;
+            color: black;
+            text-shadow: 0 0 4px #aaffaa;
+            margin: 15px 0 20px;
+            cursor: pointer;
+            transition: 0.2s;
+            box-shadow: 0 0 15px #0f0;
+        }
+        .crack-btn:hover {
+            transform: scale(0.98);
+            background: #00cc33;
+            box-shadow: 0 0 30px #0f0;
+        }
+
+        /* مربع عرض الرابط المهيأ */
+        .prepared-box {
+            background: #031003;
+            border-radius: 32px;
+            padding: 12px 15px;
+            margin: 10px 0 10px;
+            border-left: 8px solid #0f0;
+            word-break: break-all;
+            font-family: monospace;
+            font-size: 0.85rem;
+            color: #8aff8a;
+        }
+
+        /* سجل التخمين */
+        .log-console {
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 24px;
+            padding: 12px;
+            max-height: 160px;
+            overflow-y: auto;
+            font-size: 0.75rem;
+            font-family: monospace;
+            color: #6eff6e;
+            margin-top: 20px;
+            border: 1px dashed #3eff3e;
+        }
+
+        /* تذييل بنفس الشكل المطلوب */
+        .footer-box {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 750px;
+            margin-top: 35px;
+            background: rgba(30, 0, 0, 0.75);
+            backdrop-filter: blur(8px);
+            border: 2px solid #ff2020;
+            border-radius: 50px;
+            padding: 20px;
+            box-shadow: 0 0 60px #ff0000cc, inset 0 0 40px #ff000044;
+            animation: shakeGlow 2.5s infinite alternate;
+        }
+        @keyframes shakeGlow {
+            0% { box-shadow: 0 0 40px #ff0000; transform: translate(0,0) rotate(0deg);}
+            25% { box-shadow: 0 0 70px #ff3300; transform: translate(2px, -1px) rotate(0.5deg);}
+            50% { box-shadow: 0 0 90px #ff0000; transform: translate(-2px, 2px) rotate(-0.5deg);}
+            75% { box-shadow: 0 0 60px #ff2200; transform: translate(1px, 1px) rotate(0.2deg);}
+            100% { box-shadow: 0 0 40px #ff0000; transform: translate(0,0) rotate(0deg);}
+        }
+        .glitch-text {
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 800;
+            text-align: center;
+            text-shadow: 0.05em 0 0 rgba(255,0,0,0.75), -0.05em -0.025em 0 rgba(0,255,0,0.75);
+            animation: glitch 500ms infinite;
+        }
+        @keyframes glitch {
+            0% { text-shadow: 0.05em 0 0 #ff0000, -0.05em -0.025em 0 #00ff00;}
+            15% { text-shadow: -0.05em -0.025em 0 #ff0000, 0.025em 0.025em 0 #00ff00;}
+            50% { text-shadow: 0.025em 0.05em 0 #ff0000, 0.05em 0 0 #00ff00;}
+            100% { text-shadow: -0.025em 0 0 #ff0000, -0.025em -0.025em 0 #00ff00;}
+        }
+        .hacker-icons {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 12px;
+            font-size: 2rem;
+            color: #ff5555;
+            filter: drop-shadow(0 0 15px red);
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px);}
+            50% { transform: translateY(-5px);}
+            100% { transform: translateY(0px);}
+        }
+        .hacked-badge {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+            gap: 8px;
+        }
+        @media (max-width: 550px) {
+            .glitch-red-title { font-size: 1.1rem; }
+            .crack-container { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- أرقام برمجية متساقطة (هولوغرام هكرز) -->
+<canvas id="falling-digits" style="position: fixed; top:0; left:0; width:100%; height:100%; z-index:0; opacity:0.4; pointer-events: none;"></canvas>
+
+<div class="crack-container">
+    <div class="glitch-red-title">
+        ᯤ تـخـمين ڪروت شبڪه الـ 𝑾𝑰 𝑭𝑰 ᯤ
+    </div>
+
+    <!-- 1. الحقل الأول: أول رقم وأخر رقم (لكارت wi-fi مكون من 8 أرقام) -->
+    <div class="input-group">
+        <label><i class="fas fa-credit-card"></i> أدخـل اول و اخر رقمين فـ الڪارت (Wi-Fi 8 أرقام)</label>
+        <input type="text" id="cardEdges" class="glow-input" placeholder="مثال: 12......78" value="12******78">
+    </div>
+
+    <!-- 2. رابط صفحة تسجيل كارت الواي فاي -->
+    <div class="input-group">
+        <label><i class="fas fa-link"></i> رابط صفحه تسجيل كارت الواي فاي للدخول</label>
+        <input type="url" id="targetLoginUrl" class="glow-input" placeholder="https://example.com/wifi-login">
+        <div class="prepared-box" id="urlPreviewDisplay"># لم يتم تهيئة الرابط بعد</div>
+    </div>
+
+    <!-- 3. عدد أرقام الكارت المحدد (ثابت 8 أرقام لكروت Wi-Fi) -->
+    <div class="input-group">
+        <label><i class="fas fa-hashtag"></i> عدد أرقام الكارت (لشبكات Wi-Fi = 8 أرقام)</label>
+        <input type="number" id="cardLength" class="glow-input" value="8" min="8" max="8" readonly style="background:#0a2a0a; cursor:not-allowed;">
+        <small style="color:#7aff7a; display:block; text-align:center;">🔒 كروت الواي فاي تتكون من 8 أرقام فقط</small>
+    </div>
+
+    <!-- زر تنفيذ الهجوم الذكي -->
+    <button id="crackBtn" class="crack-btn"><i class="fas fa-skull"></i>ᯤ بـدأ الـتخـمين ᯤ</button>
+
+    <!-- سجل العمليات -->
+    <div class="log-console" id="attackLog">
+        [*] نظام التخمين لكروت Wi-Fi (8 أرقام) . . . <br>
+        [✓] أدخل اول واخر رقمين + رابط الصفحة.
+    </div>
+</div>
+
+<!-- ========== تذييل الموقع (كما هو مطلوب) ========= -->
+<div class="footer-box">
+    <div class="hacker-icons">
+        <i class="fas fa-user-secret"></i>
+        <i class="fas fa-bug"></i>
+        <i class="fas fa-shield-hal"></i>
+        <i class="fas fa-terminal"></i>
+    </div>
+    <div class="glitch-text">
+        جـمـيع الحـقـوق مـحـفـوظه لـدى الـهڪر 𝐖𝐇𝐈𝗦𝗞𝗬 𝗘𝗟𝗬𝗢𝐔َ𝗧𝐔𝗕𝗘𝗥
+    </div>
+    <div class="hacked-badge">
+        <span>᯼</span>
+        <span>[ HACKED SYSTEM ]</span>
+        <span>᯼</span>
+    </div>
+</div>
+
+<script>
+    (function() {
+        // 1) الخلفية التفاعلية بالأرقام المتساقطة (Matrix hologram)
+        const canvas = document.getElementById('falling-digits');
+        const ctx = canvas.getContext('2d');
+        let width, height;
+        let drops = [];
+        const chars = "01 10 1101 1010 1111 0101 101101 1001 111001 💀 𓆣 〄 ⛧ ⓿ ❶ ◆ █ ▲ ▼ ➤ ❯ 101010 110011 001100";
+        function initMatrix() {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            canvas.width = width;
+            canvas.height = height;
+            const columns = Math.floor(width / 22);
+            drops = [];
+            for(let i=0; i<columns; i++) {
+                drops[i] = Math.random() * -height;
+            }
+        }
+        function drawMatrix() {
+            ctx.fillStyle = "rgba(0, 5, 0, 0.05)";
+            ctx.fillRect(0, 0, width, height);
+            ctx.fillStyle = "#0f0";
+            ctx.font = "18px 'Fira Code', monospace";
+            for(let i=0; i<drops.length; i++) {
+                const text = chars[Math.floor(Math.random() * chars.length)];
+                ctx.fillText(text, i * 22, drops[i]);
+                drops[i] += 1.8;
+                if(drops[i] > height && Math.random() > 0.98) drops[i] = 0;
+            }
+            requestAnimationFrame(drawMatrix);
+        }
+        window.addEventListener('resize', () => { initMatrix(); });
+        initMatrix();
+        drawMatrix();
+
+        // 2) منطق تخمين ذكي لكروت 8 أرقام
+        const logDiv = document.getElementById('attackLog');
+        function addLog(msg) {
+            const p = document.createElement('div');
+            p.innerHTML = `[${new Date().toLocaleTimeString()}] ${msg}`;
+            logDiv.appendChild(p);
+            logDiv.scrollTop = logDiv.scrollHeight;
+        }
+
+        // تهيئة الرابط المعروض
+        const urlInput = document.getElementById('targetLoginUrl');
+        const previewBox = document.getElementById('urlPreviewDisplay');
+        function updateUrlPreview() {
+            let rawUrl = urlInput.value.trim();
+            if(rawUrl === "") previewBox.innerHTML = "⚠️ لا يوجد رابط، سيتم محاكاة افتراضية";
+            else previewBox.innerHTML = `🌐 الرابط المهيأ: <strong>${escapeHtml(rawUrl)}</strong>`;
+        }
+        urlInput.addEventListener('input', updateUrlPreview);
+        updateUrlPreview();
+
+        function escapeHtml(str) { return str.replace(/[&<>]/g, function(m){if(m==='&') return '&amp;'; if(m==='<') return '&lt;'; if(m==='>') return '&gt;'; return m;});}
+
+        // محاكاة التخمين على كارت wi-fi بطول 8 أرقام
+        async function simulateBruteForce(edgesPattern, fullLength, loginPageUrl) {
+            // edgesPattern مثل "12******78"
+            let firstPart = edgesPattern.substring(0,2);   // اول رقمين
+            let lastPart = edgesPattern.slice(-2);         // اخر رقمين
+            
+            if(firstPart.length < 2) firstPart = "00";
+            if(lastPart.length < 2) lastPart = "00";
+            const middleLength = fullLength - 4;  // 8-4 = 4 ارقام وسطية
+            if(middleLength <= 0 || fullLength !== 8) { 
+                addLog(`❌ خطأ: كروت Wi-Fi يجب ان تكون 8 أرقام فقط. تم استلام ${fullLength}`);
+                return null;
+            }
+            
+            addLog(`ᯤ بدأ التخمين الذكي (Wi-Fi 8 أرقام)`);
+            addLog(`📡 النمط: اول رقمين [${firstPart}] + 4 ارقام وسطية + اخر رقمين [${lastPart}]`);
+            addLog(`⚙️ سيتم تجربة أرقام كارت متولدة على صفحة: ${loginPageUrl || "الرابط الـمخترق"}`);
+            
+            let attempts = 0;
+            const maxAttempts = 40;
+            let validCard = null;
+            
+            for(let i=0; i<maxAttempts; i++) {
+                attempts++;
+                // توليد 4 أرقام عشوائية للجزء الأوسط
+                let middle = "";
+                for(let m=0; m<middleLength; m++) {
+                    middle += Math.floor(Math.random() * 10).toString();
+                }
+                let generatedCard = firstPart + middle + lastPart;
+                
+                // شرط نجاح وهمي (لأغراض العرض التوضيحي فقط)
+                let isSuccess = false;
+                if(generatedCard.includes("77") && generatedCard.slice(-1)==='3') isSuccess = true;
+                else if(attempts > 28 && (generatedCard.charCodeAt(3) % 5 ===0)) isSuccess = true;
+                else if(i === maxAttempts-3) isSuccess = true;  // ضمان نجاح توضيحي
+                
+                addLog(`🔍 محاولة #${attempts} : ${generatedCard} ... ${isSuccess ? '✔ صالح ♧#' : '✘ فشل'}`);
+                
+                if(isSuccess) {
+                    validCard = generatedCard;
+                    addLog(`ᯤ✨✨ تم العثور على رقم كارت Wi-Fi صالح: ${validCard} ✨ᯤ✨`);
+                    addLog(`📡 تم إدخال "${validCard}" في حقل تسجيل الدخول بنجاح 🔓`);
+                    break;
+                }
+                await sleep(150);
+            }
+            if(!validCard) {
+                addLog(`⚠️ لم يتم العثور على كارت صالح بعد ${maxAttempts} محاولة. جرب نطاق اخر.`);
+            }
+            return validCard;
+        }
+
+        function sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }
+
+        const crackButton = document.getElementById('crackBtn');
+        let isRunning = false;
+        crackButton.addEventListener('click', async () => {
+            if(isRunning) { addLog("⏳ عملية جارية بالفعل ... انتظر"); return; }
+            isRunning = true;
+            const edges = document.getElementById('cardEdges').value.trim();
+            const cardLen = parseInt(document.getElementById('cardLength').value);
+            const loginUrl = document.getElementById('targetLoginUrl').value.trim();
+            
+            if(cardLen !== 8) { 
+                addLog("❗ كروت الواي فاي عدد ارقامها 8 فقط. تم ضبط الحقل تلقائياً.");
+                document.getElementById('cardLength').value = 8;
+                isRunning=false; 
+                return;
+            }
+            if(!edges || edges.length < 6) { 
+                addLog("❗ أدخل نمط أول واخر رقمين بشكل صحيح (مثال: 12******78)"); 
+                isRunning=false; 
+                return;
+            }
+            addLog("ᯤ بدأ الهجوم على شـبڪه Wi-Fi (8 أرقام) . . . ");
+            await simulateBruteForce(edges, 8, loginUrl || "https://demo-wifi-auth.local");
+            addLog("ᯤ عملية التخمين انتهت. تحقق من النتيجة اعلاه.");
+            isRunning = false;
+        });
+
+        // تأثيرات جمالية إضافية
+        const allInputs = document.querySelectorAll('.glow-input');
+        allInputs.forEach(inp => {
+            inp.addEventListener('mouseenter', () => { inp.style.transform = 'scale(1.01)'; });
+            inp.addEventListener('mouseleave', () => { inp.style.transform = 'scale(1)'; });
+        });
+    })();
+</script>
+</body>
+</html>
