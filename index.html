@@ -277,7 +277,7 @@
     </div>
 
     <!-- زر تنفيذ الهجوم الذكي -->
-    <button id="crackBtn" class="crack-btn"><i class="fas fa-skull"></i>ᯤ بـدأ الـتخـمين ᯤ</button>
+    <button id="crackBtn" class="crack-btn"><i class="fas fa-skull"></i> بـدأ الـتخـمين ᯤ</button>
 
     <!-- سجل العمليات -->
     <div class="log-console" id="attackLog">
@@ -295,7 +295,7 @@
         <i class="fas fa-terminal"></i>
     </div>
     <div class="glitch-text">
-        جـمـيع الحـقـوق مـحـفـوظه لـدى الـهڪر 𝐖𝐇𝐈𝗦𝗞𝗬 𝗘𝗟𝗬𝗢𝐔َ𝗧𝐔𝗕𝗘𝗥
+        جـمـيع الحـقـوق مـحـفـوظه لـدى الـهڪر 𝐖𝐇𝐈𝗦𝗞𝗬 𝗘𝗟𝗬𝗢𝑼َ𝗧𝐔𝗕𝗘𝗥
     </div>
     <div class="hacked-badge">
         <span>᯼</span>
@@ -354,7 +354,7 @@
         const previewBox = document.getElementById('urlPreviewDisplay');
         function updateUrlPreview() {
             let rawUrl = urlInput.value.trim();
-            if(rawUrl === "") previewBox.innerHTML = "⚠️ لا يوجد رابط، سيتم محاكاة افتراضية";
+            if(rawUrl === "") previewBox.innerHTML = "⚠️ لا يوجد الـرجاء وضع رابط صفحه تسجيل الدخول";
             else previewBox.innerHTML = `🌐 الرابط المهيأ: <strong>${escapeHtml(rawUrl)}</strong>`;
         }
         urlInput.addEventListener('input', updateUrlPreview);
@@ -399,7 +399,7 @@
                 else if(attempts > 28 && (generatedCard.charCodeAt(3) % 5 ===0)) isSuccess = true;
                 else if(i === maxAttempts-3) isSuccess = true;  // ضمان نجاح توضيحي
                 
-                addLog(`🔍 محاولة #${attempts} : ${generatedCard} ... ${isSuccess ? '✔ صالح ♧#' : '✘ فشل'}`);
+                addLog(`# محاولة #${attempts} : ${generatedCard} ... ${isSuccess ? '✔ صالح ♧#' : '✘ فشل'}`);
                 
                 if(isSuccess) {
                     validCard = generatedCard;
